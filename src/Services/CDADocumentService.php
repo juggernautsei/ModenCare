@@ -158,8 +158,8 @@ class CDADocumentService extends BaseService
                 'me' => session_id(),// to authenticate in CCM. Portal only.
                 'site' => $_SESSION ['site_id']
             ]
-        ]); die('response generated!');
-
+        ]);
+        var_dump($response); die;
         $status = $response->getStatusCode(); // @todo validate
 
         return $response->getContent();
