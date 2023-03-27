@@ -149,7 +149,7 @@ class CDADocumentService extends BaseService
         $httpClient = HttpClient::create([
             "verify_peer" => false,
             "verify_host" => false
-        ]); die('HTTPClient reached!');
+        ]);
         $response = $httpClient->request('GET', $url, [
             'query' => [
                 'combination' => $pid,
