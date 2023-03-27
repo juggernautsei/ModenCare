@@ -74,7 +74,6 @@ if ($_REQUEST['action'] === 'dl') {
     exit;
 }
 if ($_REQUEST['action'] === 'view') {
-    die('We are inside the gateway');
     $ccda_xml = $cdaService->portalGenerateCCD($pid);
     // CCM returns viewable CCD html file
     // that displays to new tab opened from home
