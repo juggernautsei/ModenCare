@@ -159,7 +159,7 @@ class CDADocumentService extends BaseService
                 'site' => $_SESSION ['site_id']
             ]
         ]);
-        var_dump($response); die;
+
         $status = $response->getStatusCode(); // @todo validate
 
         return $httpClient->getContent();
