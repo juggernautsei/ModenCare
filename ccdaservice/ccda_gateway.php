@@ -11,6 +11,7 @@
  * @copyright Copyright (c) 2019 Brady Miller <brady.g.miller@gmail.com>
  * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
  */
+namespace OpenEMR\Services;
 
 use OpenEMR\Common\Csrf\CsrfUtils;
 use OpenEMR\Services\CDADocumentService;
@@ -59,10 +60,9 @@ if (!isset($_SESSION['site_id'])) {
     $_SESSION ['site_id'] = 'default';
 }
 session_write_close();
-die('varified');
 
 $cdaService = new CDADocumentService();
-
+die('varified');
 if ($_REQUEST['action'] === 'dl') {
     $ccda_xml = $cdaService->portalGenerateCCDZip($pid);
     // download zip containing CCDA.xml, CCDA.html and cda.xsl files
