@@ -162,9 +162,8 @@ class CDADocumentService extends BaseService
         ]);
 
         $status = $response->getStatusCode(); // @todo validate
-        var_dump($status);
         if ($status == 500) {
-            return "Check back later or try again later.";
+            return "No CCDA to create now. Please try again later.";
         }
         return $response->getContent();
     }
