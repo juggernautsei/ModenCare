@@ -150,6 +150,7 @@ class CDADocumentService extends BaseService
             "verify_peer" => false,
             "verify_host" => false
         ]);
+        var_dump($_SESSION['site_id']); die;
         $response = $httpClient->request('GET', $url, [
             'query' => [
                 'combination' => $pid,
