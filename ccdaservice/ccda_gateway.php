@@ -63,6 +63,7 @@ session_write_close();
 $cdaService = new CDADocumentService();
 
 if ($_REQUEST['action'] === 'dl') {
+    die('download');
     $ccda_xml = $cdaService->portalGenerateCCDZip($pid);
     // download zip containing CCDA.xml, CCDA.html and cda.xsl files
     header("Cache-Control: public");
@@ -93,7 +94,6 @@ if ($_REQUEST['action'] === 'report_ccd_view') {
     exit;
 }
 if ($_REQUEST['action'] === 'report_ccd_download') {
-    die('download');
     $ccda_xml = $cdaService->generateCCDZip($pid);
     // download zip containing CCDA.xml, CCDA.html and cda.xsl files
     header("Cache-Control: public");
