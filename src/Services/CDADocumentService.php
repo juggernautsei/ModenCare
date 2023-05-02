@@ -162,7 +162,7 @@ class CDADocumentService extends BaseService
         ]);
 
         $status = $response->getStatusCode(); // @todo validate
-echo "<pre>";
+        var_dump($status);
         return $response->getContent();
     }
 
