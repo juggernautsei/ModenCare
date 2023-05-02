@@ -66,7 +66,7 @@ if ($_REQUEST['action'] === 'dl') {
     $ccda_xml = $cdaService->portalGenerateCCDZip($pid);
 
     if (!$ccda_xml) {
-        echo(xlt("Nothing to download at this time."));
+        echo(xlt("Nothing to download at this time. Click back to return home."));
         exit;
     }
     // download zip containing CCDA.xml, CCDA.html and cda.xsl files
