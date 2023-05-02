@@ -63,7 +63,7 @@ session_write_close();
 $cdaService = new CDADocumentService();
 
 if ($_REQUEST['action'] === 'dl') {
-    $ccda_xml = $cdaService->portalGenerateCCDZip($pid);die('download');
+    $ccda_xml = $cdaService->portalGenerateCCDZip($pid);
     // download zip containing CCDA.xml, CCDA.html and cda.xsl files
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
