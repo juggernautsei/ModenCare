@@ -73,7 +73,7 @@ if ($_REQUEST['action'] === 'dl') {
     echo $ccda_xml;
     exit;
 }
-die;
+
 if ($_REQUEST['action'] === 'view') {
     $ccda_xml = $cdaService->portalGenerateCCD($pid);
     // CCM returns viewable CCD html file
@@ -81,6 +81,7 @@ if ($_REQUEST['action'] === 'view') {
     echo $ccda_xml;
     exit;
 }
+die(201);
 if ($_REQUEST['action'] === 'report_ccd_view') {
     $ccda_xml = $cdaService->generateCCDHtml($pid);
     if (stripos($ccda_xml, '/interface/login_screen.php') !== false) {
