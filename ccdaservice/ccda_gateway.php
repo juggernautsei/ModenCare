@@ -73,6 +73,7 @@ if ($_REQUEST['action'] === 'dl') {
     echo $ccda_xml;
     exit;
 }
+die;
 if ($_REQUEST['action'] === 'view') {
     $ccda_xml = $cdaService->portalGenerateCCD($pid);
     // CCM returns viewable CCD html file
