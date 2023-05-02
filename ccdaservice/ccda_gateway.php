@@ -63,14 +63,14 @@ session_write_close();
 $cdaService = new CDADocumentService();
 
 if ($_REQUEST['action'] === 'dl') {
-    die('download');
-    $ccda_xml = $cdaService->portalGenerateCCDZip($pid);
+    $ccda_xml = $cdaService->portalGenerateCCDZip($pid);die('download');
     // download zip containing CCDA.xml, CCDA.html and cda.xsl files
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
     header("Content-Disposition: attachment; filename=SummaryofCare.zip");
     header("Content-Type: application/zip");
     header("Content-Transfer-Encoding: binary");
+
     echo $ccda_xml;
     exit;
 }
