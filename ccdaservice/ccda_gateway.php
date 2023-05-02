@@ -43,7 +43,7 @@ if (isset($_SESSION['pid']) && isset($_SESSION['patient_portal_onsite_two'])) {
 if (!CsrfUtils::verifyCsrfToken($_GET["csrf_token_form"])) {
     CsrfUtils::csrfNotVerified();
 }
-die('varified');
+
 
 if (empty($GLOBALS['ccda_alt_service_enable'])) {
     die("Cda generation service turned off: Verify in Administration->Globals! Click back to return home."); // Die an honorable death!!
@@ -58,8 +58,8 @@ if (IS_DASHBOARD && ($GLOBALS['ccda_alt_service_enable'] != 1 && $GLOBALS['ccda_
 if (!isset($_SESSION['site_id'])) {
     $_SESSION ['site_id'] = 'default';
 }
-
 session_write_close();
+die('varified');
 
 $cdaService = new CDADocumentService();
 
